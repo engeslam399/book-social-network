@@ -13,18 +13,6 @@ services:
       - "5432:5432"
     networks:
       - bsn_network
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@bsn.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-    ports:
-      - "5050:80"
-    depends_on:
-      - postgres
-    networks:
-      - bsn_network
   maildev:
     image: maildev/maildev
     container_name: mail-dev-bsn

@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "roles")
 public class Role{
@@ -24,5 +25,6 @@ public class Role{
     @ManyToMany(mappedBy = "roles")
     @JsonIgnore // Prevents infinite loop
     private List<User> users;
+
 
 }

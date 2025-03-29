@@ -38,7 +38,6 @@ public class AuthService {
         if (userRepository.findByEmail(request.getEmail()).isPresent()){
             throw new RuntimeException("Email already in use");
         }
-
         List<Role> roles = new ArrayList<>();
         Role userRole = roleRepository.findByName("USER").orElseThrow(() -> new RuntimeException("User not found"));
         roles.add(userRole);
