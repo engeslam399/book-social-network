@@ -1,0 +1,36 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/book_social_network
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  mail:
+    host: localhost
+    port: 1025
+    username: eslam
+    password: eslam
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+bsn:
+  app:
+    jwtSecret: NzI3MWQzZmYzZjJhMzMwY2M3NzE1NzQ3ZmQwZDEyZjAr
+    jwtExpirationMs: 1800000  # 30 minutes in milliseconds (30 * 60 * 1000)
+    activationLink : https://localhost:8080/activate-account
+server:
+  port: 8088

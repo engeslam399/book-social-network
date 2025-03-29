@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: book-network-api
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 30MB  # Maximum size for a single uploaded file
+server:
+  port: 8088
+  servlet:
+    context-path: /api/v1
